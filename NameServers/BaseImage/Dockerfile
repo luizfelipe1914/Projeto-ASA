@@ -12,4 +12,4 @@ RUN systemctl enable sshd
 RUN systemctl restart named
 EXPOSE 53/udp
 EXPOSE 2222/tcp
-CMD [ "systemctl", "restart", "named" ]
+CMD [ "systemctl", "start", "named" ]
