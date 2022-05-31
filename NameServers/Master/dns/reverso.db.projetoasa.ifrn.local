@@ -1,0 +1,20 @@
+;
+; BIND reverse data file for broadcast zone
+;
+$TTL	604800
+@	IN	SOA	ns1.projetoasa.ifrn.local. webmaster.projetoasa.ifrn.local. (
+		 2022053101		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	ns1.projetoasa.ifrn.local.
+@	IN	NS	ns2.projetoasa.ifrn.local.
+@	IN	MX 10	mensageiro
+
+10	IN	PTR		ns1
+11	IN	PTR		ns2
+25	IN	PTR		mensageiro	
+20	IN	PTR		web-01
+30	IN	PTR		web-02	

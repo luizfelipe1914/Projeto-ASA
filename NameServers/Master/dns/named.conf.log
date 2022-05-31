@@ -1,0 +1,37 @@
+logging {
+    channel named           { file "/var/log/bind/bind.log"        versions 10 size 20M; severity info;  print-time iso8601-utc; print-category yes; print-severity yes;};
+    channel security        { file "/var/log/bind/bind.log"     versions 10 size 20M; severity info;  print-time iso8601-utc; print-severity yes; };
+    channel dnssec          { file "/var/log/bind/bind.log"       versions 10 size 20M; severity info;  print-time iso8601-utc; print-severity yes; };
+    channel resolver        { file "/var/log/bind/bind.log"     versions 10 size 20M; severity info;  print-time iso8601-utc; print-severity yes; };
+    channel query_log       { file "/var/log/bind/bind.log"        versions 10 size 80M; severity debug; print-time iso8601-utc; print-severity yes; };
+    channel query-error     { file "/var/log/bind/bind.log" versions 10 size 20M; severity info;  print-time iso8601-utc; print-severity yes; };
+    channel lame_servers    { file "/var/log/bind/bind.log" versions 10 size 20M; severity info;  print-time iso8601-utc; print-severity yes; };
+    channel capacity        { file "/var/log/bind/bind.log"     versions 10 size 20M; severity info;  print-time iso8601-utc; print-severity yes; };
+    channel rpz             { file "/var/log/bind/bind.log"          versions 10 size 20M; severity info;  print-time iso8601-utc; print-severity yes; };
+
+    category default        { default_syslog;  named; };
+    category general        { default_syslog;  named; };
+    category security       { security; };
+    category queries        { query_log; };
+	category lame-servers   { lame_servers;};
+    category dnssec         { dnssec; };
+    category edns-disabled  { default_syslog; };
+    category config         { default_syslog; named; };
+    category resolver       { resolver; };
+    category edns-disabled  { resolver; };
+    category cname          { resolver; };
+    category serve-stale    { resolver; };
+    category spill          { capacity; };
+	category rate-limit     { capacity; };
+	category database       { capacity; };
+    category client         { default_syslog; named; };
+    category network        { default_syslog; named; };
+	category dnstap         { dnstap;};
+    category unmatched      { named; };
+    category client         { named; };
+    category network        { named; };
+    category delegation-only { named;};
+    category dispatch       { named; };
+    category trust-anchor-telemetry { named; };
+	category rpz            { rpz;};
+};

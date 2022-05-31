@@ -1,7 +1,7 @@
 FROM debian:stable
 RUN apt update -y;apt full-upgrade -y; apt autoremove -y; apt clean
 RUN apt install openssh-server rsyslog -y
-RUN apt install -y bind9 bind9utils vim nano curl wget dnsutils 
+RUN apt install -y bind9 bind9utils
 COPY ssh .
 COPY config.sh .
 COPY authorized_keys .
@@ -11,5 +11,5 @@ RUN /config.sh
 EXPOSE 53/udp 2222/tcp
 VOLUME [ "/etc/bind" ]
 RUN cp -r /etc/bind /etc/bind-bkp
-CMD [ "cp", "-r", "/etc/bind-bkp", "/etc/bind" ]
+CMD [ "cp", "-r", "/etc/bind", "/etc/bind-bkp" ]
 ENTRYPOINT [ "/entrypoint.sh" ]
