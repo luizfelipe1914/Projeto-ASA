@@ -1,7 +1,7 @@
 1. Criar a rede no docker
    
    ```shell
-   docker network create --subnet=172.25.0.0/24 CT-NETWORK
+   docker network create --subnet=172.25.0.0/24 ctnetwork
    ```
 
 2. Criar as pastas para o mapeamento do volume
