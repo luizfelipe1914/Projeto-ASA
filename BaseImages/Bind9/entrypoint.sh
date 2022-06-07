@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/sh 
 
 rm -rf /etc/bind-bkp
 /etc/init.d/ssh start

@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-grep -v "^#" ssh | sed '/^$/d' > /etc/ssh/sshd_config
+cat /ssh > /etc/ssh/sshd_config 
 mkdir -p /root/.ssh
 mv authorized_keys /root/.ssh/
 touch /var/log/auth.log
