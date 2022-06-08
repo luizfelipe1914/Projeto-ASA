@@ -1,6 +1,4 @@
-#!/bin/sh 
-
-rm -rf /etc/bind-bkp
+#!/bin/bash
 /etc/init.d/ssh start
 /etc/init.d/named start
-bash
+/bin/bash
