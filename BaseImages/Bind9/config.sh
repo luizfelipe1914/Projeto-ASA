@@ -1,5 +1,3 @@
-#!/bin/sh
-
 cat /ssh > /etc/ssh/sshd_config 
 mkdir -p /root/.ssh
 mv authorized_keys /root/.ssh/
