@@ -5,10 +5,10 @@ COPY entrypoint.sh .
 COPY resolv .
 WORKDIR /etc/apache2/sites-available
 COPY projetoasa.ifrn.local.conf . 
-COPY wiki.projetoasa.ifrn.local .
+COPY wiki.projetoasa.ifrn.local.conf .
 WORKDIR /
 COPY config.sh .
-RUN CHMOD +x config.sh
+RUN chmod +x config.sh
 RUN /config.sh
 RUN chmod +x /entrypoint.sh 
 EXPOSE 80 443 

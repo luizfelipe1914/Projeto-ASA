@@ -24,6 +24,7 @@ mensageiro	IN		A	172.16.0.25
 
 ; REGISTROS CNAME
 
-www		IN		CNAME	web-01
+www			IN		CNAME	web-01
+wiki		IN		CNAME	web-01
 webmail		IN		CNAME	mensageiro
 rocket		IN		CNAME	web-02
