@@ -4,12 +4,12 @@ RUN apt install -y apache2 vim nano wget curl
 COPY entrypoint.sh .
 COPY resolv .
 WORKDIR /etc/apache2/sites-available
-COPY projetoasa.ifrn.local.conf . 
-COPY wiki.projetoasa.ifrn.local.conf .
+COPY projetoasa.conf . 
+COPY wiki.conf .
 WORKDIR /
 COPY config.sh .
 RUN chmod +x config.sh
-RUN /config.sh
+RUN bash config.sh
 RUN chmod +x /entrypoint.sh 
 EXPOSE 80 443 
 CMD [ "service", "apache2", "start" ]
