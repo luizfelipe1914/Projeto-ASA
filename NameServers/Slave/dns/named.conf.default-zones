@@ -27,15 +27,15 @@ zone "255.in-addr.arpa" {
 	file "/etc/bind/db.255";
 };
 
-zone "projetoasa.ifrn.local" {
+zone "mg.asa.br" {
     type slave;
-    file "/etc/bind/slave/db.projetoasa.ifrn.local";
+    file "/etc/bind/slave/db.mg.asa.br";
 	masters { 172.25.0.10; };
 };
 
 zone "0.25.172.in-addr.arpa" {
 	type slave;
-	file "/etc/bind/slave/reverso.db.projetoasa.ifrn.local";
+	file "/etc/bind/slave/reverso.db.mg.asa.br";
 	masters { 172.25.0.10; };
 };
 

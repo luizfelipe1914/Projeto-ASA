@@ -4,15 +4,15 @@
 ; Instead, copy it, edit named.conf, and use that copy.
 ;
 $TTL	86400
-@	IN 	SOA 	ns1.projetoasa.ifrn.local.	webmaster.projetoasa.ifrn.local. (
-		2022053101		; Serial
+@	IN 	SOA 	ns1.mg.asa.br.	webmaster.mg.asa.br. (
+		 2022062801		; Serial
 			  86400		; Refresh
 			  86400		; Retry
 			2419200		; Expire
 			  86400 )	; Negative Cache TTL
 ;
-@	IN	NS	ns1.projetoasa.ifrn.local.
-@	IN	NS	ns2.projetoasa.ifrn.local.
+@	IN	NS	ns1.mg.asa.br.
+@	IN	NS	ns2.mg.asa.br.
 @	IN	MX 10	mensageiro
 
 ; REGISTROS "A"

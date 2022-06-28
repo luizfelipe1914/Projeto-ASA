@@ -27,9 +27,9 @@ zone "255.in-addr.arpa" {
 	file "/etc/bind/db.255";
 };
 
-zone "projetoasa.ifrn.local" {
+zone "mg.asa.br" {
     type master;
-    file "/etc/bind/db.projetoasa.ifrn.local";
+    file "/etc/bind/db.mg.asa.br.local";
 	allow-transfer { 172.25.0.11; };
 	notify yes;
 	also-notify { 172.25.0.11; };
@@ -37,7 +37,7 @@ zone "projetoasa.ifrn.local" {
 
 zone "0.25.172.in-addr.arpa" {
 	type master;
-	file "/etc/bind/reverso.db.projetoasa.ifrn.local";
+	file "/etc/bind/reverso.db.mg.asa.br.local";
 	allow-transfer { 172.25.0.11; };
 	notify yes;
 	also-notify { 172.25.0.11; };
