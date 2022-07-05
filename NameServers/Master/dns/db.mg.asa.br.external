@@ -5,7 +5,7 @@
 ;
 $TTL	86400
 @	IN 	SOA 	ns1.mg.asa.br.	webmaster.mg.asa.br. (
-		     2022070501		; Serial
+		       SERIAL	; Serial
 			  86400		; Refresh
 			  86400		; Retry
 			2419200		; Expire
@@ -16,11 +16,11 @@ $TTL	86400
 @	IN	MX 10	mensageiro
 
 ; REGISTROS "A"
-ns1		IN		A	10.25.2.99
-ns2		IN		A	10.25.2.100
-web-01	IN		A	10.25.2.89
-web-02	IN		A	10.25.4.105
-mensageiro	IN		A	172.25.0.100
+ns1		IN		A	PRIMARY
+ns2		IN		A	SECONDARY
+web-01	IN		A	APACHE2
+web-02	IN		A	NGINX
+mensageiro	IN		A	POSTFIX
 
 ; REGISTROS CNAME
 
