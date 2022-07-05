@@ -3,7 +3,7 @@
 ;
 $TTL	604800
 @	IN	SOA	ns1.mg.asa.br. webmaster.mg.asa.br. (
-		     2022070501		; Serial
+		     SERIAL		; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
@@ -13,8 +13,8 @@ $TTL	604800
 @	IN	NS	ns2.mg.asa.br.
 @	IN	MX 10	mensageiro
 
-99	IN	PTR		ns1
-100	IN	PTR		ns2
-100	IN	PTR		mensageiro	
-89	IN	PTR		web-01
-105	IN	PTR		web-02	
+PRIMARY	IN	PTR		ns1
+SECONDARY	IN	PTR		ns2
+POSTFIX	IN	PTR		mensageiro	
+APACHE2	IN	PTR		web-01
+NGINX	IN	PTR		web-02	
