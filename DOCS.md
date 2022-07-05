@@ -12,7 +12,7 @@
 
 1. Efetue a clonagem do repositório
 
-2. No arquivo config.json dentro de NameServers/Master, configure os parâmetros com os endereços IPv4 da rede externa(rede dos laboratórios do IFRN ou a rede da máquina que está executando o Docker)
+2. No arquivo config.json dentro de NameServers/Master/dns, configure os parâmetros com os endereços IPv4 da rede externa(rede dos laboratórios do IFRN ou a rede da máquina que está executando o Docker)
 
 3. Após configurados os parâmetros, dentro do repositório, há uma script chamado build&run-infra.sh. Execute esse script passando como parâmetro a palavra build:
 
