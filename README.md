@@ -25,3 +25,8 @@ O projeto consiste em provisionar uma infraestrutura containerizada composta por
   
   Os procedimentos operacionais encontram-se no arquivo [DOCS](DOCS.md).
   
+  #### Serviços já provisionados:
+  
+  * [DNS](NameServers)
+  * [HTTP(S) - Nginx](WebServer)
+  
