@@ -12,21 +12,28 @@ def main():
 	except Exception as err:
 		print(err)
 
-	direta = Path(r"db.mg.asa.br.external")
-	reversa = Path(r"db.reverso.mg.asa.br.external")
-	data_direta = direta.read_text()
-	data_reversa = reversa.read_text()
+
+	direta = open("db.mg.asa.br.external", "r")
+	reversa = open("db.reverso.mg.asa.br.external", "r")
+	data_direta = direta.readlines()
+	data_reversa = reversa.readlines()
 
 	data_direta = data_direta.replace(f"SERIAL", f"{configuration['SERIAL']}")
 	data_reversa = data_reversa.replace(f"SERIAL", f"{configuration['SERIAL']}")
 	configuration.pop("SERIAL")
 	
+	direta.close()
+	reversa.close()
+
 	for c in configuration.keys():
 		data_direta = data_direta.replace(f"{c}", f"{configuration[c]}")
 		temp = configuration[c].split('.')
 		data_reversa = data_reversa.replace(f"{c}", f"{temp[3]}")
-	direta.write_text(data_direta)
-	reversa.write_text(data_reversa)
+	
+	direta = open("db.mg.asa.br.external", "w")
+	reversa = open("db.reverso.mg.asa.br.external", "w")
+	direta.write(data_direta)
+	reversa.write(data_reversa)
 
 if __name__ == '__main__':
 	main()
