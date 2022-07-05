@@ -1,10 +1,12 @@
 acl external {
 	10.25.0.0/16; // Rede dos laboratórios do IFRN 
 	10.24.0.0/16; // Rede Wi-Fi EduRoam
+	127.0.0.0/8;  // Rede de loopback
 };
 
 acl internal{
-	172.25.0.0/24;
+	172.25.0.0/24; // Rede dos containers
+	127.0.0.0/8;  // Rede de loopback
 };
 
 view internal {
