@@ -23,5 +23,5 @@ O projeto consiste em provisionar uma infraestrutura containerizada composta por
   * Ferramentas de observabilidade (Elasticsearch + Kibana)
   * Serviço de Web Chat (Rocket Chat)
   
-  Os procedimentos operacionais encontram-se no arquivo [DOCs](DOCs.md).
+  Os procedimentos operacionais encontram-se no arquivo [DOCS](DOCS.md).
   
