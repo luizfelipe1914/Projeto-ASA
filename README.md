@@ -2,7 +2,7 @@
 
 Repositório destinado ao Projeto da disciplina de Administração de Sistemas Abertos (ASA). Toda infraestrutura desnvolvida na disciplina será provisionada como código. Tecnologias utilizadas:
   * Docker
-  * Docker Compose (num futoro bem próximo...)
+  * Docker Compose (num futuro bem próximo...)
   * Shell Script(Bash)
   * Python
   * Ansible(num futuro bem próximo...)
