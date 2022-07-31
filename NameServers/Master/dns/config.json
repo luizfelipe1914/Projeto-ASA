@@ -1,9 +1,8 @@
 {
 	"SERIAL": "",
-	"PRIMARY":"",
-	"SECONDARY":"",
+	"MASTER":"",
+	"SLAVE":"",
 	"APACHE2":"",
 	"NGINX":"",
 	"POSTFIX":""
-
 }
