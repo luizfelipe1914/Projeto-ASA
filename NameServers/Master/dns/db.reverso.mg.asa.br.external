@@ -13,8 +13,8 @@ $TTL	604800
 @	IN	NS	ns2.mg.asa.br.
 @	IN	MX 10	mensageiro
 
-PRIMARY	IN	PTR		ns1
-SECONDARY	IN	PTR		ns2
+MASTER	IN	PTR		ns1
+SLAVE	IN	PTR		ns2
 POSTFIX	IN	PTR		mensageiro	
 APACHE2	IN	PTR		web-01
 NGINX	IN	PTR		web-02	
