@@ -16,14 +16,8 @@ view internal {
 		internal;
 	};
 
-	options {
-		allow-query { 
-			internal; 
-		};
-		allow-recursion {
-			internal;
-		};
-	};
+	allow-query { internal; };
+	allow-recursion { internal; };
 
 	// prime the server with knowledge of the root servers
 	zone "." {
