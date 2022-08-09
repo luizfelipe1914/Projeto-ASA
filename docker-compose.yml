@@ -1,0 +1,63 @@
+version: '3'
+services:
+
+  web01:
+    build:
+      context: ./WebServer/web01
+      dockerfile: Dockerfile
+    image: web01
+    container_name: web01
+    restart: always
+    tty: true
+    networks:
+      - ctnetwork
+
+  web02:
+    build: 
+      context: ./WebServer/web02
+      dockerfile: Dockerfile
+    image: web02
+    container_name: web02
+    restart: always
+    tty: true
+    networks:
+      - ctnetwork
+
+  proxy:
+    build:
+      context: ./WebServer/reverse-proxy
+      dockerfile: Dockerfile
+    image: reverse-proxy
+    container_name: reverse-proxy
+    restart: always
+    tty: true
+    ports:
+      - "80:80"
+    depends_on:
+      - web01
+      - web02
+    networks:
+      - ctnetwork
+      
+  dns:
+    build: 
+      context: ./NameServers/Master
+      dockerfile: Dockerfile
+    image: dns
+    container_name: ns1
+    restart: always
+    tty: true
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+    networks:
+      - ctnetwork
+
+networks:
+  ctnetwork:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.25.0.0/24"
+          gateway: "172.25.0.1"

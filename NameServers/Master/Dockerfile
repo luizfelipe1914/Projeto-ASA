@@ -1,4 +1,4 @@
-FROM bind9:debian-stable
+FROM bind9
 WORKDIR /etc/bind
 COPY dns/ .
 WORKDIR /
