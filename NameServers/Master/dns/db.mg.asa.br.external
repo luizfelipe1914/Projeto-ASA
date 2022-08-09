@@ -4,6 +4,7 @@
 ; Instead, copy it, edit named.conf, and use that copy.
 ;
 $TTL	86400
+$ORIGIN mg.asa.br.
 @	IN 	SOA 	ns1.mg.asa.br.	webmaster.mg.asa.br. (
 		    SERIAL	; Serial
 			  86400		; Refresh

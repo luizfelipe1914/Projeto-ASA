@@ -2,6 +2,7 @@
 ; BIND reverse data file for broadcast zone
 ;
 $TTL	604800
+$ORIGIN 0.25.172.in-addr.arpa.
 @	IN	SOA	ns1.mg.asa.br. webmaster.mg.asa.br. (
 		 2022070401		; Serial
 			 604800		; Refresh

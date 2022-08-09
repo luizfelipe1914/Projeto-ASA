@@ -51,7 +51,7 @@ view external {
 		also-notify { 172.25.0.11; };
 	};
 
-	zone "0.25.172.in-addr.arpa" {
+	zone "0.25.10.in-addr.arpa" {
 		type master;
 		file "/etc/bind/reverso.db.mg.asa.br.external";
 		allow-transfer { 172.25.0.11; };
